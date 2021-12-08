@@ -1,10 +1,11 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png"/>
-    <router-link :to="{ path: '/' }">/home</router-link>
-    <router-link :to="{ path: '/abort' }">/abort</router-link>
-    <router-view :msg="msg"/>
-  </div>
+  <el-container>
+    <el-header>
+    </el-header>
+    <el-main>
+      <router-view/>
+    </el-main>
+  </el-container>
 </template>
 
 <script>

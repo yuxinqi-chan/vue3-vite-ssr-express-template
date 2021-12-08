@@ -1,6 +1,6 @@
 const express = require('express');
 const {db} = require('../mongodb');
-
+const postService = require('./post.serivce');
 /**
  *
  * @param {express.Request} req
@@ -8,10 +8,10 @@ const {db} = require('../mongodb');
  * @param {express.NextFunction} next
  */
 module.exports = function services(req, res, next) {
-  req.getInfo = getInfo;
-  next();
+    req.postService = postService;
+    next();
 };
 
 async function getInfo() {
-  return await db.listCollections().toArray();
+    return await db.listCollections().toArray();
 }
