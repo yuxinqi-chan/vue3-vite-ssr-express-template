@@ -74,5 +74,9 @@ router.isReady().then(() => {
             };
         });
     }
+    router.beforeResolve((to, from, next) => {
+        console.log(to);
+        next();
+    });
     app.mount('#app', true);
 });

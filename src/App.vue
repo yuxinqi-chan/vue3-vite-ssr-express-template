@@ -1,6 +1,8 @@
 <template>
   <el-container>
     <el-header>
+      <router-link :to="{ path: '/' }">/home</router-link>
+      <router-link :to="{ path: '/abort' }">/abort</router-link>
     </el-header>
     <el-main>
       <router-view/>
